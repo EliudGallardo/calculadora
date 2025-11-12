@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora Desglosada</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4"> Calculadora Desglosada</h1>
+
+    <div class="card p-4 shadow">
+      <!-- Selección de tipo -->
+      <div class="mb-3">
+        <label for="tipoOperacion" class="form-label">Selecciona tipo de operación</label>
+        <select id="tipoOperacion" class="form-select">
+          <option value="triplo">Triplo</option>
+          <option value="cuadruplo">Cuádruplo</option>
+          <option value="ambos">Ambos</option>
+        </select>
+      </div>
+
+      <!-- Campo de operación -->
+      <div class="mb-3">
+        <label for="operacionInput" class="form-label">Ingresa una operación</label>
+        <input type="text" class="form-control" id="operacionInput" placeholder="Ejemplo: 2*(3+4/2)" />
+      </div>
+
+      <!-- Botones -->
+      <div class="d-flex gap-2">
+        <button id="btnGenerar" class="btn btn-primary w-100">Generar</button>
+        <button id="btnLimpiar" class="btn btn-danger w-100">Limpiar</button>
+      </div>
+
+      <!--Resultado -->
+      <div id="resultado" class="alert alert-info mt-4 d-none" style="white-space: pre-wrap;"></div>
+    </div>
+
+    <!--Historial -->
+    <div class="card p-3 mt-4 shadow">
+      <h4 class="text-center">🧾 Historial</h4>
+      <ul id="historial" class="list-group list-group-flush mt-3"></ul>
+    </div>
+  </div>
+
+  <script src="./bundle.js"></script>
+</body>
+</html>
